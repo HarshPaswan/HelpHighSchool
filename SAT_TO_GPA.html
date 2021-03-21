@@ -1,0 +1,169 @@
+<style>
+    .button {
+        background-color: #01002e;
+        border: none;
+        color: white;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 4px;
+        cursor: pointer;
+        font-family: Verdana, Arial, sans-serif;
+    }
+    .text {
+        color: #01002e;
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 14px;
+    }
+    input[type=text] {
+        padding: 5px 10px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+    }
+</style>
+
+<input type="text" id="myText" value="" >
+<button onclick="SATfromGPA()" class = button>Calculate GPA from SAT</button>
+<button onclick="GPAfromSAT()" class = button>Calculate SAT from GPA</button>
+
+<h5 id="SAT" class = text>SAT: </h5>
+<h5 id="GPA" class = text>GPA: </h5>
+
+<script>
+    function SATfromGPA() { //named wrong lol
+        var entered = document.getElementById("myText").value; //entered in text box
+        var score = entered; 
+        document.getElementById("SAT").innerHTML = "SAT: " + score; //prints back out what was entered
+        var gpa;
+        var gpa2;
+        var two = false; 
+
+        if (score <= 1600 && score >= 1527)
+            gpa = 4.0;
+        else if (score <= 1526 && score >= 1380)
+            gpa = 3.99;
+        else if (score <= 1379 && score >= 1327)
+            gpa = 3.98;
+        else if (score <= 1320 && score >= 1293)
+            gpa = 3.97;
+        else if (score <= 1292 && score >= 1273)
+            gpa = 3.96;
+        else if (score <= 1272 && score >= 1253)
+            gpa = 3.95;
+        else if (score <= 1252 && score >= 1240)
+            gpa = 3.94;
+        else if (score <= 1239 && score >= 1227)
+            gpa = 3.93;
+        else if (score <= 1226 && score >= 1213)
+            gpa = 3.92;
+        else if (score <= 1212 && score >= 1200)
+            gpa = 3.91;
+        else if (score <= 1199 && score >= 1193)
+            gpa = 3.9;
+        else if (score <= 1192 && score>=1100) {
+            gpa = 3.73;  
+            gpa2 = 3.9;
+            two = true;
+        }
+        else if (score <= 1093 && score>=1000) {
+            gpa = 3.37; 
+            gpa2 = 3.71;
+            two = true;
+        }
+        else if (score <= 993 && score>=900) {
+            gpa = 2.88; 
+            gpa2 = 3.34;
+            two = true;
+        }
+        else if (score <= 893 && score>=800) {
+            gpa = 2.25; 
+            gpa2 = 2.85;
+            two = true;
+        }
+        else if (score <= 793 && score>=700) {
+            gpa = 1.39; 
+            gpa2 = 2.20;
+            two = true;
+        }
+        else if (score <= 693 && score>=627) {
+            gpa = 0.02; 
+            gpa2 = 1.31;
+        }
+
+        if(two) {
+            document.getElementById("GPA").innerHTML = "GPA: " + gpa + " to " + gpa2;
+        } else {
+            document.getElementById("GPA").innerHTML = "GPA: " + gpa;
+        }
+
+    }
+    function GPAfromSAT() { 
+        var entered = document.getElementById("myText").value; //entered in text box
+        var gpa = entered; 
+        document.getElementById("GPA").innerHTML = "GPA: " + gpa; //prints back out what was entered
+
+        var score;
+        var score2; 
+
+        if(gpa == 4) {
+            score = 1520; //lower bound 
+            score2 = 1600; //upper bound
+        } else if(gpa == 3.99) {
+            score = 1380; 
+            score2 = 1520;
+        } else if(gpa == 3.98) {
+            score = 1320;
+            score2 = 1380;
+        } else if(gpa == 3.97) {
+            score = 1290;
+            score2 = 1320;
+        } else if(gpa == 3.96) {
+            score = 1270;
+            score2 = 1290;
+        } else if(gpa == 3.95) {
+            score = 1250;
+            score2 = 1270;
+        } else if(gpa == 3.94) {
+            score = 1240;
+            score2 = 1250;
+        } else if(gpa == 3.93) {
+            score = 1230;
+            score2 = 1240;
+        } else if(gpa == 3.92) {
+            score = 1210;
+            score2 = 1230;
+        } else if(gpa == 3.91) {
+            score = 1200;
+            score2 = 1210;
+        } else if(gpa == 3.9) {
+            score = 1190;
+            score2 = 1200;
+        } else if(gpa < 3.9 && gpa >= 3.73) {
+            score = 1100;
+            score2 = 1190;
+        } else if(gpa < 3.73 && gpa >= 3.37) {
+            score = 1000;
+            score2 = 1100;
+        } else if(gpa < 3.37 && gpa >= 2.88) {
+            score = 900;
+            score2 = 1000;
+        } else if(gpa < 2.88 && gpa >= 2.25) {
+            score = 800;
+            score2 = 900;
+        } else if(gpa < 2.25 && gpa >= 1.39) {
+            score = 700;
+            score2 = 800;
+        } else if(gpa < 1.39 && gpa >= 0) {
+            score = 600;
+            score2 = 700;
+        } 
+
+        document.getElementById("SAT").innerHTML = "SAT: " + score + " to " + score2;
+        }
+</script>

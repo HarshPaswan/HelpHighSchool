@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+  <meta charset="UTF-8">
+  <style> 
+    input[type=text] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    .button {
+        background-color: #01002e;
+        border: none;
+        color: white;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 4px;
+        cursor: pointer;
+        font-family: Verdana, Arial, sans-serif;
+    }
+    .textCSS {
+        color: #01002e;
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 14px;
+    }
+    .label {
+        color: rgb(149, 149, 149);
+        padding: 8px;
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 14px;
+    }
+    </style>
+
+  <script language="JavaScript">
+    function showInput() {
+    document.getElementById('display').innerHTML = 
+                    document.getElementById("txt_score").value;
+	document.getElementById('display2').innerHTML = 
+                    document.getElementById("txt_gpa").value;
+	document.getElementById('display3').innerHTML = 
+                    document.getElementById("txt_nation").value;
+	document.getElementById('display4').innerHTML = 
+                    document.getElementById("txt_state").value;
+	document.getElementById('display5').innerHTML = 
+                    document.getElementById("txt_district").value;
+	document.getElementById('display6').innerHTML = 
+                    document.getElementById("txt_leader").value;
+	if (document.getElementById("txt_score").value >1550){
+		document.getElementById('calc').innerHTML = 90
+	}
+	else if (document.getElementById("txt_score").value >1500){
+		document.getElementById('calc').innerHTML = 85
+	}
+	else if (document.getElementById("txt_score").value >1450){
+		document.getElementById('calc').innerHTML = 60
+	}
+	else if (document.getElementById("txt_score").value >1400){
+		document.getElementById('calc').innerHTML = 45
+	}
+	else if (document.getElementById("txt_score").value >200){
+		document.getElementById('calc').innerHTML = 20
+	}
+    }
+  </script>
+
+  </head>
+<body>
+
+  <form class = textCSS>
+    SAT Score : <input type = "text" name = "sat_score" id = "txt_score"/>
+    <br>
+    <br>
+    College/Unweighted GPA (out of 4.0): <input type = "text" name = "GPA" id = "txt_gpa"/>
+    <br>
+    <br>
+    # National Awards: <input type = "text" name = "NA" id = "txt_nation"/>
+    <br>
+    <br>
+    # State Awards: <input type = "text" name = "SA" id = "txt_state"/> 
+    <br>
+    <br>
+    # District Awards: <input type = "text" name = "DA" id = "txt_district"/>
+    <br>
+    <br>
+    # Leadership Positions: <input type = "text" name = "LA" id = "txt_leader"/> 
+    <br>
+    <br>
+  </form>
+  <br>
+  <input type="submit" onclick="showInput();" class = button><br/>
+  <label class = label>Your Input: </label>
+  <p><span id='display'></span></p>
+  <p><span id='display2'></span></p>
+  <p><span id='display3'></span></p>
+  <p><span id='display4'></span></p>
+  <p><span id='display5'></span></p>
+  <p><span id='display6'></span></p>
+  <label class = label>Your Chance: </label>		
+  <p><span id='calc'></span></p>
+</body>
+</html>
