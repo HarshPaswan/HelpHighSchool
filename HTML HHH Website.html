@@ -1,0 +1,374 @@
+<html>
+<head>
+<script>
+
+function show(shown, hidden, hidden2, hidden3, hidden4, hidden5){
+document.getElementById(shown).style.display='block';
+document.getElementById(hidden).style.display='none';
+document.getElementById(hidden2).style.display='none';
+document.getElementById(hidden3).style.display='none';
+document.getElementById(hidden4).style.display = 'none';
+document.getElementById(hidden5).style.display = 'none';
+
+return false;
+}
+</script>
+<style>
+    .button {
+        background-color: #01002e;
+        border: none;
+        color: white;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 4px;
+        cursor: pointer;
+        font-family: Verdana, Arial, sans-serif;
+    }
+    .text {
+        color: #01002e;
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 14px;
+    }
+    input[type=text] {
+        padding: 5px 10px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+    }
+	.textCSS {
+        color: #01002e;
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 14px;
+    }
+    .label {
+        color: rgb(149, 149, 149);
+        padding: 8px;
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 14px;
+    }
+</style>
+<script language="JavaScript">
+    function showInput() {
+    document.getElementById('display').innerHTML = 
+                    document.getElementById("txt_score").value;
+	document.getElementById('display2').innerHTML = 
+                    document.getElementById("txt_gpa").value;
+	document.getElementById('display3').innerHTML = 
+                    document.getElementById("txt_nation").value;
+	document.getElementById('display4').innerHTML = 
+                    document.getElementById("txt_state").value;
+	document.getElementById('display5').innerHTML = 
+                    document.getElementById("txt_district").value;
+	document.getElementById('display6').innerHTML = 
+                    document.getElementById("txt_leader").value;
+	if (document.getElementById("txt_score").value >1550){
+		document.getElementById('calc').innerHTML = 90
+	}
+	else if (document.getElementById("txt_score").value >1500){
+		document.getElementById('calc').innerHTML = 85
+	}
+	else if (document.getElementById("txt_score").value >1450){
+		document.getElementById('calc').innerHTML = 60
+	}
+	else if (document.getElementById("txt_score").value >1400){
+		document.getElementById('calc').innerHTML = 45
+	}
+	else if (document.getElementById("txt_score").value >200){
+		document.getElementById('calc').innerHTML = 20
+	}
+    }
+  </script>
+</head>
+<body>
+
+<a href="#" onclick="return show('Home','TIMEMANAGEMENT', 'CA', 'SR', 'SATGPA', 'IVY');">HOME</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#" onclick="return show('TIMEMANAGEMENT','Home', 'CA', 'SR', 'SATGPA', 'IVY');">TIME MANAGEMENT</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#" onclick="return show( 'SR', 'CA', 'Home', 'TIMEMANAGEMENT', 'SATGPA', 'IVY');">SAT RESOURCES</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#" onclick="return show('CA', 'Home', 'TIMEMANAGEMENT', 'SR', 'SATGPA', 'IVY');">COLLEGE APPLICATIONS</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#" onclick="return show('SATGPA', 'Home', 'TIMEMANAGEMENT', 'SR', 'CA', 'IVY');">SAT to GPA converter</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#" onclick="return show('IVY', 'Home', 'TIMEMANAGEMENT', 'SR', 'CA', 'SATGPA');">Ivy League Chance Calculator</a> 
+
+
+
+  <div id="TIMEMANAGEMENT" style="display:none">
+    <br><br><b>When should do I do my homework? </b><br> <br>
+Many people tend to say "get it over with," and this likely applies to doing homework. If you do your work before leisure activities, such as playing video games, then you will 
+<br>not have to worry about homework while doing said activity and, as a result, you will be less stressed. By getting homework done first, 
+<br>it allows you to participate in other activities without the threat of homework hanging over your head. However, this does not mean do assignments right after school. Try to take at least 40 minutes off any work (watch TV, 
+<br>go outside for an hour, take a nap) and then begin homework. This will allow you to re-energize and focus better on the task at hand. 
+
+<br><br><b>What if I have tests the next day? </b><br><br>
+<br>If you have tests to study for, it is recommended that you study right after that 40 minute break after school, 
+<br>as it is better to study before doing homework. If you do homework before studying, then you will get tired and 
+<br>lose focus while studying which may lead you to retain less information and as a result, perform poorly on your tests. 
+<br>Time yourself well, and make sure to finish all studying and homework as efficiently as possible. 
+<br><br><b>Extracurriculars</b><br><br>
+A huge aspect of college applications is your extracurricular activities, or things that you do outside of school. <br>
+These are valued very highly by colleges as it gives you an opportunity to show them what type of person you are and what you can do besides get good grades. <br> 
+Important extracurriculars to include on your application include internships, leadership activities, work experiences, and club/team memberships. <br>
+By including these, you can greatly increase your chances of getting <br>
+into the college by showing them that you are more than your grades and are involved in other things that could be beneficial in college or even after it. <br>
+    
+  </div>
+  
+  <div id="Home">
+
+    <br><br><b>Help For High School Students </b><br><br><br>
+    Welcome to HelpHighSchool <br> <br>
+    This website provides help to high school students who are struggling with college applications and sat testing by offering a multitude of resources.
+    
+  </div>
+
+  <div id="CA"  style = "display:none">
+
+    <br><br><b>Application Fee</b><br> <br> 
+    The application fee will be around $30-$60 for applications from U.S. Residents but it may be higher for international students.<br>
+	If you cannot afford the fee than colleges will give you a fee waiver depending on your situation.
+    <br><br><b>Transcript (Grades)</b><br><br>
+	You must request an official transcript from your high school to send to the colleges you are applying to. <br>
+	The transcript has your grades and GPA on it which are one of the most important parts of the application. <br>
+	If this requirement is not met than your application will not be be considered.
+
+    <br><br><b>SAT and ACT Scores</b><br><br>
+	Whenever you take your SAT or ACT, you have the option to send the scores to the college when they are available. <br>
+	However, this is not recommended because if you're desired score is not achieved than you would not want colleges to see that score. <br>
+	So it is recommended that you do not send sat or act scores right as they are available after scoring. <br>
+	Also, it is recommended that you take no more than 3 tests because colleges will not like to see a good score after 10 tries. <br>
+	Check out the SAT RESOURCES tab for some helpful resources.<br>
+    <br><br><b>SAT Test Optional</b><br><br>
+	With the current pandemic, many colleges have decided to go test-optional. <br> 
+	What this means is that they will not penalize you for not including an ACT or SAT score on your application. <br>
+	However, the score may possibly provide benefits to your application. 
+
+    <br><br><b>Letters of Recommendation</b><br><br>
+	Many colleges require that you have two to three teacher recommendations. <br>
+	These recommendations. mostly, include 1 core-subject (math, science, History, English) and another is usually one from an elective teacher. <br> 
+	An additional recommendation letter can be from any teacher or it can from a member of the community. <br>
+	The one thing that should be made sure before asking your teachers for recommendation is: Do they know you well and do they have a good impression of you. <br> 
+	Since you have no idea what these teachers will say about you (sealed-envelopes, you have no access to the letters), you want to make sure <br>
+	this teacher can speak only the best of you. Also, make sure you ask politely. Try to give them as much information about <br>
+	you outside of you school life (awards, extra-curriculars, etc.). <br>
+	Make sure you ask the teacher two months in advance of the Application deadline to ensure the letters are sent on time.
+     
+    <br><br><b>Writing Prompts</b><br><br>
+	The writing portion of your college application is the most time-consuming. <br>
+	This is because the writing portion usually includes the personal statement and a supplemental essay (if you want to get into a specific school within the college). <br>
+	The personal statement is your answer to an essay prompt. This is asked for because it gives the college admissions officers a better <br>
+	insight into who you are outside of the school environment. To some extent, this portion has a heavier weight than grades or sat score.<br>
+ 	Many people have gotten into prestigious schools with low grades and a low sat scores, but with an inspiring essay.<br>
+    
+  </div>
+
+	<div id="SR" style = "display:none">
+
+    	<br><br><b>Prep Scholar SAT Online Course ($397)</b><br><br>
+	This course includes more than 100 hours of lessons through articles and videos. <br>
+	There are also more than 7,100 questions to practice different skills.
+
+        <br><br><b>Mike Barret TestingIsEasy online Course ($90)</b><br><br>
+	Mike Barret's black book is a physical book that explains all SAT strategies. <br>
+	Additionally, there is an online course explaining those same strategies but in video format.
+	
+	<br><br><b>1600.io (99$ annual/19$ Monthly)</b><br><br>
+In this course, the instructor, George, explains different SAT strategies in video format. <br>
+He also has answer explanations for almost every released test.
+
+	<br><br><b>Khan Academy</b><br><br>
+Khan Academy is an extremely popular website that offers over 1000 questions for <br>
+reading, writing, and math, and also offers practice tests to test students' knowledge on topics they have learned. <br>
+In addition to this, Khan Academy has also partnered with Collegeboard to provide personalized prep for all students that sign up. <br>
+    
+	<br><br><b>SAT Released Tests</b><br><br>
+​This Reddit post contains all of the previously released SATs that include some resources you <br>
+will not find on the college board’s official website. By practicing with all of these tests, you can familiarize yourself with common trends and loopholes, <br>
+allowing you to more effectively develop SAT strategies and get a higher score. <br>
+
+	<br><br><b>SAT Frequently Seen Idioms</b><br><br>
+Some of the most popular incorrect answers include idioms. Whether it is the reading or writing section, 
+test-takers tend to answer these questions incorrectly because they do not know that the 
+words they are trying to define are also in a list of idioms. With this guide, students can learn all the idioms on the SAT and improve their scores.
+  </div>
+  
+  <div id="SATGPA"  style = "display:none">
+	<input type="text" id="myText" value="" >
+<button onclick="SATfromGPA()" class = button>Calculate GPA from SAT</button>
+<button onclick="GPAfromSAT()" class = button>Calculate SAT from GPA</button>
+
+<h5 id="SAT" class = text>SAT: </h5>
+<h5 id="GPA" class = text>GPA: </h5>
+
+<script>
+    function SATfromGPA() { //named wrong lol
+        var entered = document.getElementById("myText").value; //entered in text box
+        var score = entered; 
+        document.getElementById("SAT").innerHTML = "SAT: " + score; //prints back out what was entered
+        var gpa;
+        var gpa2;
+        var two = false; 
+
+        if (score <= 1600 && score >= 1527)
+            gpa = 4.0;
+        else if (score <= 1526 && score >= 1380)
+            gpa = 3.99;
+        else if (score <= 1379 && score >= 1327)
+            gpa = 3.98;
+        else if (score <= 1320 && score >= 1293)
+            gpa = 3.97;
+        else if (score <= 1292 && score >= 1273)
+            gpa = 3.96;
+        else if (score <= 1272 && score >= 1253)
+            gpa = 3.95;
+        else if (score <= 1252 && score >= 1240)
+            gpa = 3.94;
+        else if (score <= 1239 && score >= 1227)
+            gpa = 3.93;
+        else if (score <= 1226 && score >= 1213)
+            gpa = 3.92;
+        else if (score <= 1212 && score >= 1200)
+            gpa = 3.91;
+        else if (score <= 1199 && score >= 1193)
+            gpa = 3.9;
+        else if (score <= 1192 && score>=1100) {
+            gpa = 3.73;  
+            gpa2 = 3.9;
+            two = true;
+        }
+        else if (score <= 1093 && score>=1000) {
+            gpa = 3.37; 
+            gpa2 = 3.71;
+            two = true;
+        }
+        else if (score <= 993 && score>=900) {
+            gpa = 2.88; 
+            gpa2 = 3.34;
+            two = true;
+        }
+        else if (score <= 893 && score>=800) {
+            gpa = 2.25; 
+            gpa2 = 2.85;
+            two = true;
+        }
+        else if (score <= 793 && score>=700) {
+            gpa = 1.39; 
+            gpa2 = 2.20;
+            two = true;
+        }
+        else if (score <= 693 && score>=627) {
+            gpa = 0.02; 
+            gpa2 = 1.31;
+        }
+
+        if(two) {
+            document.getElementById("GPA").innerHTML = "GPA: " + gpa + " to " + gpa2;
+        } else {
+            document.getElementById("GPA").innerHTML = "GPA: " + gpa;
+        }
+
+    }
+    function GPAfromSAT() { 
+        var entered = document.getElementById("myText").value; //entered in text box
+        var gpa = entered; 
+        document.getElementById("GPA").innerHTML = "GPA: " + gpa; //prints back out what was entered
+
+        var score;
+        var score2; 
+
+        if(gpa == 4) {
+            score = 1520; //lower bound 
+            score2 = 1600; //upper bound
+        } else if(gpa == 3.99) {
+            score = 1380; 
+            score2 = 1520;
+        } else if(gpa == 3.98) {
+            score = 1320;
+            score2 = 1380;
+        } else if(gpa == 3.97) {
+            score = 1290;
+            score2 = 1320;
+        } else if(gpa == 3.96) {
+            score = 1270;
+            score2 = 1290;
+        } else if(gpa == 3.95) {
+            score = 1250;
+            score2 = 1270;
+        } else if(gpa == 3.94) {
+            score = 1240;
+            score2 = 1250;
+        } else if(gpa == 3.93) {
+            score = 1230;
+            score2 = 1240;
+        } else if(gpa == 3.92) {
+            score = 1210;
+            score2 = 1230;
+        } else if(gpa == 3.91) {
+            score = 1200;
+            score2 = 1210;
+        } else if(gpa == 3.9) {
+            score = 1190;
+            score2 = 1200;
+        } else if(gpa < 3.9 && gpa >= 3.73) {
+            score = 1100;
+            score2 = 1190;
+        } else if(gpa < 3.73 && gpa >= 3.37) {
+            score = 1000;
+            score2 = 1100;
+        } else if(gpa < 3.37 && gpa >= 2.88) {
+            score = 900;
+            score2 = 1000;
+        } else if(gpa < 2.88 && gpa >= 2.25) {
+            score = 800;
+            score2 = 900;
+        } else if(gpa < 2.25 && gpa >= 1.39) {
+            score = 700;
+            score2 = 800;
+        } else if(gpa < 1.39 && gpa >= 0) {
+            score = 600;
+            score2 = 700;
+        } 
+
+        document.getElementById("SAT").innerHTML = "SAT: " + score + " to " + score2;
+        }
+	</script>
+  </div>
+  <div id="IVY"  style = "display:none">
+	<form class = textCSS>
+		SAT Score : <input type = "text" name = "sat_score" id = "txt_score"/>
+		<br>
+		<br>
+		College/Unweighted GPA (out of 4.0): <input type = "text" name = "GPA" id = "txt_gpa"/>
+		<br>
+		<br>
+		# National Awards: <input type = "text" name = "NA" id = "txt_nation"/>
+		<br>
+		<br>
+		# State Awards: <input type = "text" name = "SA" id = "txt_state"/> 
+		<br>
+		<br>
+		# District Awards: <input type = "text" name = "DA" id = "txt_district"/>
+		<br>
+		<br>
+		# Leadership Positions: <input type = "text" name = "LA" id = "txt_leader"/> 
+		<br>
+		<br>
+	  </form>
+	  <br>
+	  <input type="submit" onclick="showInput();" class = button><br/>
+	  <label class = label>Your Input: </label>
+	  <p><span id='display'></span></p>
+	  <p><span id='display2'></span></p>
+	  <p><span id='display3'></span></p>
+	  <p><span id='display4'></span></p>
+	  <p><span id='display5'></span></p>
+	  <p><span id='display6'></span></p>
+	  <label class = label>Your Chance: </label>		
+	  <p><span id='calc'></span></p>
+  </div>
+
+</body>
+</html>
